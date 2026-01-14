@@ -45,7 +45,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn scipy jupyterlab
 
 ```bash
 # Clone this repo
-git clone <your-repo-url>
+git clone https://github.com/MilanKalajdzic/Machine-learning-I-project.git
 cd exam-score-prediction
 
 # Launch Jupyter
@@ -53,20 +53,6 @@ jupyter lab exam_score_prediction_improved.ipynb
 
 # Or if you're using the . py file in VS Code, just open and run!  🚀
 ```
-
----
-
-## 📁 Project Structure
-
-```
-📦 exam-score-prediction/
-├── 📊 exam_score_prediction_improved.py  # Main analysis script
-├── 📄 README.md                          # You are here!  👋
-├── 📈 Exam_Score_Prediction_Modified.csv # The data (not included - add yours!)
-└── 🖼️  visualizations/                    # Output plots (auto-generated)
-```
-
----
 
 ## 🎨 The Dataset
 
@@ -106,4 +92,93 @@ We trained **7 different models** to see which one reigns supreme:
 | 🟣 **Lasso** | Feature Selection | Sparse models |
 | 🟠 **ElasticNet** | Best of Both Worlds | Balanced approach |
 
-###
+###🔴 Team Non-Linear (The Heavy Hitters)
+
+| Model | Special Power | Best For |
+|-------|--------------|----------|
+| 🌳 Decision Tree | Rule-Based Splits | Interpretable non-linearity |
+| 🌲 Random Forest | Ensemble Power | Robust predictions |
+| ⚡ SVR | Kernel Magic | Complex patterns |
+
+---
+
+📊 Key Findings
+🏆 The Winner Is...
+🎉 [Check the notebook to find out!] 🎉
+
+The best model achieves: 
+✅ R² Score: ~0.XX (explains XX% of variance)
+✅ RMSE: ~X.XX points
+✅ MAE: ~X.XX points
+
+💡 Top Insights
+📚 Study Effectiveness = Study Hours × Attendance
+The secret sauce:  studying hard + showing up!
+
+😴 Sleep Quality Matters
+Well-rested students perform better (shocker!)
+
+📊 Exam Difficulty Has Impact
+But good students shine regardless!
+
+🎯 The Best Features
+Check the feature importance plots in the notebook!
+
+---
+🛠️ Technical Stack
+| Category | Tools |
+|----------|-------|
+| Language | Python 3.8+ 🐍 |
+| Data Wrangling | Pandas, NumPy |
+| Visualization | Matplotlib, Seaborn |
+| Machine Learning | Scikit-learn |
+| Statistics | SciPy |
+| Environment | Jupyter Lab / VS Code |
+
+---
+
+📚 Project Workflow
+graph LR
+    A[📥 Load Data] --> B[🔍 EDA]
+    B --> C[🧹 Preprocessing]
+    C --> D[✂️ Train/Val/Test Split]
+    D --> E[🤖 Train Models]
+    E --> F[📊 Evaluate]
+    F --> G[🏆 Select Best]
+    G --> H[📝 Conclusions]
+
+
+📥 Data Loading:  Import the student dataset
+🔍 Exploratory Data Analysis:  Understand patterns and distributions
+🧹 Data Preprocessing: Feature engineering + scaling
+✂️ Data Splitting: 70% train / 15% validation / 15% test
+🤖 Model Training: Train all 7 models
+📊 Evaluation: Compare performance metrics
+🏆 Winner Selection: Choose the best model
+📝 Insights: Extract actionable conclusions
+
+---
+
+📈 Results Interpretation Guide
+🎯 Understanding the Metrics
+R² Score: % of variance explained (higher = better)
+0.9+ = Excellent 🌟
+0.8-0.9 = Very Good ✅
+0.7-0.8 = Good 👍
+<0.7 = Needs Work 🔧
+
+RMSE: Average prediction error in points
+Lower is better!
+Compare to exam score standard deviation
+
+MAE: Average absolute error
+More interpretable than RMSE
+"On average, we're off by X points"
+
+🔍 Overfitting Check
+Train R² - Test R² < 0.05  →  ✅ Excellent generalization
+Train R² - Test R² < 0.10  →  ⚠️  Moderate overfitting
+Train R² - Test R² > 0.10  →  ❌ Significant overfitting
+
+
+---
