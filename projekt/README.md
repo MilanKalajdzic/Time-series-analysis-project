@@ -137,48 +137,81 @@ Check the feature importance plots in the notebook!
 
 ---
 
-📚 Project Workflow
+## 📚 Project Workflow
+
+~~~mermaid
 graph LR
-    A[📥 Load Data] --> B[🔍 EDA]
-    B --> C[🧹 Preprocessing]
-    C --> D[✂️ Train/Val/Test Split]
-    D --> E[🤖 Train Models]
-    E --> F[📊 Evaluate]
-    F --> G[🏆 Select Best]
-    G --> H[📝 Conclusions]
+    A[📥 Load Data] --> B[🔍 Exploratory Data Analysis]
+    B --> C[🧹 Data Preprocessing]
+    C --> D[✂️ Train / Validation / Test Split]
+    D --> E[🤖 Model Training]
+    E --> F[📊 Model Evaluation]
+    F --> G[🏆 Best Model Selection]
+    G --> H[📝 Conclusions & Insights]
+~~~
 
+### 🔄 Step-by-Step Breakdown
 
-📥 Data Loading:  Import the student dataset
-🔍 Exploratory Data Analysis:  Understand patterns and distributions
-🧹 Data Preprocessing: Feature engineering + scaling
-✂️ Data Splitting: 70% train / 15% validation / 15% test
-🤖 Model Training: Train all 7 models
-📊 Evaluation: Compare performance metrics
-🏆 Winner Selection: Choose the best model
-📝 Insights: Extract actionable conclusions
+- 📥 **Data Loading**  
+  Import the student performance dataset.
+
+- 🔍 **Exploratory Data Analysis (EDA)**  
+  Analyze distributions, correlations, and patterns using visualizations.
+
+- 🧹 **Data Preprocessing**  
+  - Feature engineering  
+  - Encoding categorical variables  
+  - Feature scaling  
+
+- ✂️ **Data Splitting**  
+  - 70% Training  
+  - 15% Validation  
+  - 15% Test  
+
+- 🤖 **Model Training**  
+  Train all **7 machine learning models** on the training set.
+
+- 📊 **Evaluation**  
+  Compare models using:
+  - R²
+  - RMSE
+  - MAE
+  - Train vs Test performance
+
+- 🏆 **Winner Selection**  
+  Choose the model with the best generalization performance.
+
+- 📝 **Conclusions**  
+  Extract insights and interpret feature importance.
 
 ---
 
-📈 Results Interpretation Guide
-🎯 Understanding the Metrics
-R² Score: % of variance explained (higher = better)
-0.9+ = Excellent 🌟
-0.8-0.9 = Very Good ✅
-0.7-0.8 = Good 👍
-<0.7 = Needs Work 🔧
+## 📈 Results Interpretation Guide
 
-RMSE: Average prediction error in points
-Lower is better!
-Compare to exam score standard deviation
+### 🎯 Understanding the Metrics
 
-MAE: Average absolute error
-More interpretable than RMSE
-"On average, we're off by X points"
+#### **R² Score** — Variance Explained
+- **0.90+** → 🌟 Excellent  
+- **0.80 – 0.90** → ✅ Very Good  
+- **0.70 – 0.80** → 👍 Good  
+- **< 0.70** → 🔧 Needs Improvement  
 
-🔍 Overfitting Check
-Train R² - Test R² < 0.05  →  ✅ Excellent generalization
-Train R² - Test R² < 0.10  →  ⚠️  Moderate overfitting
-Train R² - Test R² > 0.10  →  ❌ Significant overfitting
+#### **RMSE** — Root Mean Squared Error
+- Measures average prediction error in **exam points**
+- Lower = better
+- Sensitive to large errors
 
+#### **MAE** — Mean Absolute Error
+- Average absolute prediction error
+- More interpretable than RMSE  
+- *“On average, the prediction is off by X points”*
 
 ---
+
+## 🔍 Overfitting Check
+
+| Condition | Interpretation |
+|---------|----------------|
+| **Train R² − Test R² < 0.05** | ✅ Excellent generalization |
+| **< 0.10** | ⚠️ Moderate overfitting |
+| **> 0.10** | ❌ Significant overfitting |
